@@ -13,7 +13,11 @@ function App() {
         <div className="max-w-[65ch] mx-auto flex pt-2 py-3 flex-col gap-2">
           <div className="">
             <span className="font-bold">Basic text generation</span> using the{" "}
-            <a href="https://ai.google.dev/" target="_blank" className="underline">
+            <a
+              href="https://ai.google.dev/"
+              target="_blank"
+              className="underline"
+            >
               Gemini API
             </a>
           </div>
@@ -21,6 +25,7 @@ function App() {
             className="flex gap-2 items-center"
             onSubmit={async (e) => {
               e.preventDefault();
+              setTextResponse("");
               setIsGenerating(true);
               const response = await fetch(`/api/generateResponseToText`, {
                 headers: {

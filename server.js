@@ -36,4 +36,7 @@ app.post("/api/generateResponseToTextAndImage", async (req, res) => {
   res.json({ text });
 });
 
-ViteExpress.listen(app, 3000, () => console.log("Server is listening..."));
+// eslint-disable-next-line no-undef
+const port = process.env.NODE_ENV === "production" ? 8080 : 3000;
+
+ViteExpress.listen(app, port, () => console.log("Server is listening..."));
