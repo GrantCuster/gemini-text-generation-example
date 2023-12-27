@@ -6,4 +6,4 @@ export const textResponseAtom = atomWithStorage<string>(
   "text-response-atom",
   ""
 );
-export const textResonseGeneratingAtom = atom(false);
+export const textResponseGeneratingAtom = atom(false);

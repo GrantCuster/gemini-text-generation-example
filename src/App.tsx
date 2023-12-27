@@ -1,11 +1,15 @@
-import { textAtom, textResonseGeneratingAtom, textResponseAtom } from "./atoms";
+import {
+  textAtom,
+  textResponseGeneratingAtom,
+  textResponseAtom,
+} from "./atoms";
 import { useAtom } from "jotai";
 import Markdown from "react-markdown";
 
 function App() {
   const [text, setText] = useAtom(textAtom);
   const [textResponse, setTextResponse] = useAtom(textResponseAtom);
-  const [isGenerating, setIsGenerating] = useAtom(textResonseGeneratingAtom);
+  const [isGenerating, setIsGenerating] = useAtom(textResponseGeneratingAtom);
 
   return (
     <div className="flex h-[100dvh] overflow-hidden flex-col">
